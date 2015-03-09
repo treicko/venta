@@ -5,7 +5,7 @@ class Venta
 	end
 
 	def aniadir(tipo_producto, nombre_producto, precio, cantidad)
-		@total = precio
+		@total = precio * cantidad
 	end
 
 	def calcular_total
