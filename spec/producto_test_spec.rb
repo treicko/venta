@@ -19,4 +19,9 @@ describe Producto do
 		@producto_articulo.cuanto_por_articulo(2).should == 4;
 	end
 
+	it "devuelve el total de un producto servicio con relacion a su precio y la cantidad " do
+		@producto_servicio = Producto.new("servicio", "mantenimiento", 70);
+		@producto_servicio.cuanto_por_servicio(2).should == 28;
+	end
+
 end
