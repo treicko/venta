@@ -1,14 +1,18 @@
+require_relative "producto";
+#require './producto';
+#require File.expand_path(File.dirname(__FILE__) + '/producto')
+
 class Venta
 
 	def initialize()
 		@total = 0;
 	end
 
-	def aniadir(tipo_producto, nombre_producto, precio, cantidad)
-		if(tipo_producto=="articulo")
-			@total = @total+(precio*cantidad);
+	def aniadir(producto, cantidad)
+		if(producto.tipo=="articulo")
+			@total = @total+(producto.precio*cantidad);
 		else
-			@total = @total+(precio*cantidad*0.2);
+			@total = @total+(producto.precio*cantidad*0.2);
 		end
 	end
 
