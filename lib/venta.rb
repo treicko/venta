@@ -8,7 +8,7 @@ class Venta
 		if(tipo_producto=="articulo")
 			@total = @total+(precio*cantidad);
 		else
-			@total = precio*cantidad*0.2;
+			@total = @total+(precio*cantidad*0.2);
 		end
 	end
 

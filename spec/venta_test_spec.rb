@@ -23,11 +23,18 @@ describe Venta do
 		venta.calcular_total.should == 602
 	end
 
-	it "devuelve el total pra una venta con un servicio" do
+	it "devuelve el total para una venta con un servicio" do
 		venta = Venta.new();
 		venta.aniadir("servicio", "limpieza de pisos", 10, 4);
 		venta.calcular_total.should == 8
 	end
 
+	it "devuelve el total para una venta con 2 servicios" do
+		venta = Venta.new();
+		venta.aniadir("servicio", "mantenimiento", 2, 3);
+		venta.aniadir("servicio", "limpieza de pisos", 10, 4);
+		venta.calcular_total.should == 9.2
+		# == 
+	end
 
 end
