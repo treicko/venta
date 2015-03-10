@@ -9,10 +9,14 @@ class Producto
 
 	def cuanto_por(cantidad)
 		if @tipo=="articulo"
-			return @precio*cantidad
+			return cuanto_por_articulo(cantidad)
 		else
 			return @precio*cantidad*0.2
 		end
+	end
+
+	def cuanto_por_articulo(cantidad)
+		return @precio*cantidad
 	end
 
 
