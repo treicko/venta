@@ -5,7 +5,11 @@ class Venta
 	end
 
 	def aniadir(tipo_producto, nombre_producto, precio, cantidad)
-		@total = @total+(precio*cantidad);
+		if(tipo_producto=="articulo")
+			@total = @total+(precio*cantidad);
+		else
+			@total = precio*cantidad*0.2;
+		end
 	end
 
 	def calcular_total
