@@ -34,7 +34,13 @@ describe Venta do
 		venta.aniadir("servicio", "mantenimiento", 2, 3);
 		venta.aniadir("servicio", "limpieza de pisos", 10, 4);
 		venta.calcular_total.should == 9.2
-		# == 
+	end
+
+	it "devuelve el total para una venta con un servicio y un articulo" do
+		venta = Venta.new();
+		venta.aniadir("servicio", "mantenimiento", 2, 3);
+		venta.aniadir("articulo","computadora", 300, 2);
+		venta.calcular_total.should == 601.2
 	end
 
 end
