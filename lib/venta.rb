@@ -1,16 +1,15 @@
 class Venta
 
-	def initilize()
-		@total = 0
+	def initialize()
+		@total = 0;
 	end
 
 	def aniadir(tipo_producto, nombre_producto, precio, cantidad)
-		@total = precio * cantidad
+		@total = @total+(precio*cantidad);
 	end
 
 	def calcular_total
-		@total
+		return @total
 	end
-
 
 end
