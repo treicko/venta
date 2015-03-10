@@ -7,8 +7,8 @@ class Producto
 		@precio = precio_producto;
 	end
 
-	def get_tipo_producto
-		return @tipo
+	def cuanto_por(cantidad)
+		return @precio*cantidad
 	end
 
 

@@ -53,7 +53,7 @@ describe Venta do
 		venta.calcular_total.should == 601.2
 	end
 
-	it "devuelve el total para una venta con un servicio y un articulo aniadidos a una lista de productos" do
+	it "devuelve el total para una venta con un producto servicio y un producto articulo aniadidos a una venta" do
 		@producto_articulo = Producto.new("articulo","computadora", 300);
 		@producto_servicio = Producto.new("servicio", "mantenimiento", 2);
 		venta = Venta.new();
@@ -61,7 +61,6 @@ describe Venta do
 		venta.aniadir(@producto_articulo, 2);
 		venta.calcular_total.should == 601.2
 	end
-
 
 
 end
